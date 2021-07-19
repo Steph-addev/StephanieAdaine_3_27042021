@@ -1,0 +1,19 @@
+@mixin flexbox($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+@mixin alignement {
+  @include flexbox(row);
+  align-items: $alignbase;
+}
+@mixin button {
+  background-image: $gradient;
+  border-radius: $pixel-main-size;
+  height: $height-dimension;
+  color: $colorwhite-text;
+  text-align: $center;
+  cursor: pointer;
+  margin-top: $pixel-main-size;
+  padding-left: $pixel-main-size;
+  padding-right: $pixel-main-size;
+}

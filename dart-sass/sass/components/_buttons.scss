@@ -1,0 +1,13 @@
+button,
+input {
+  all: $remove-default;
+}
+.btn {
+  @include button;
+  &__commande {
+    text-align: $center;
+    margin-left: 43%;
+    margin-right: 57%;
+    margin-bottom: 40px;
+  }
+}

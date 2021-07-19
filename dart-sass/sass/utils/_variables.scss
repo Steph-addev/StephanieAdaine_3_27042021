@@ -1,0 +1,31 @@
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-thirdly: #99e2d0;
+$colorwhite-text: #ffffff;
+$colorbackground-primary: #ffffff;
+$colorbackground-secondary: rgb(246, 246, 246);
+$colorbackground-thirdly: rgb(53, 53, 53);
+$colorbackground-fourth: rgb(234, 234, 234);
+$gradient: linear-gradient($color-secondary, $color-primary);
+
+$pixel-main-size: 20px;
+$height-dimension: 40px;
+$auto-margin: auto;
+$pourcentage: 100%;
+
+$alignbase: baseline;
+$center: center;
+$positiona: absolute;
+$positionr: relative;
+
+$small: "only screen and (max-width: 767px)";
+$medium: "only screen and (min-width:768px) and (max-width:1023px)";
+$big: "only screen and (min-width:1024px) and (max-width:1439px)";
+$huge: "only screen and (min-width:1440px)";
+$above767: "only screen and (min-width:768px)";
+
+$remove-default: unset;
+$hidden: hidden;
+$visible: visible;
+
+$card-shadow: 3px 3px 2px rgb(232 232 232);

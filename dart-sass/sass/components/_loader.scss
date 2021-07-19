@@ -1,0 +1,84 @@
+.spinner-page {
+  @include flexbox(column);
+  justify-content: $center;
+  align-items: $center;
+  width: $pourcentage;
+  height: $pourcentage;
+  position: fixed;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.7);
+  background-position: $center;
+}
+.spinner-page__loader {
+  display: inline-block;
+  position: $positionr;
+  width: 90px;
+  height: 90px;
+  &--circle {
+    position: $positiona;
+    border-radius: 50%;
+    opacity: $pourcentage;
+    width: 8px;
+    height: 8px;
+  }
+  &--circle1 {
+    top: 37px;
+    left: 66px;
+    background: $color-primary;
+  }
+  &--circle2 {
+    top: 22px;
+    left: 62px;
+    background: $color-secondary;
+  }
+  &--circle3 {
+    top: 11px;
+    left: 52px;
+    background: $color-thirdly;
+  }
+  &--circle4 {
+    top: 7px;
+    left: 37px;
+    background: $color-primary;
+  }
+  &--circle5 {
+    top: 11px;
+    left: 22px;
+    background: $color-secondary;
+  }
+  &--circle6 {
+    top: 22px;
+    left: 11px;
+    background: $color-thirdly;
+  }
+  &--circle7 {
+    top: 37px;
+    left: 7px;
+    background: $color-primary;
+  }
+  &--circle8 {
+    top: 52px;
+    left: 11px;
+    background: $color-secondary;
+  }
+  &--circle9 {
+    top: 62px;
+    left: 22px;
+    background: $color-thirdly;
+  }
+  &--circle10 {
+    top: 66px;
+    left: 37px;
+    background: $color-primary;
+  }
+  &--circle11 {
+    top: 62px;
+    left: 52px;
+    background: $color-secondary;
+  }
+  &--circle12 {
+    top: 52px;
+    left: 62px;
+    background: $color-thirdly;
+  }
+}

@@ -1,0 +1,218 @@
+@media #{$small} {
+  .head-section {
+    &__search {
+      &--size {
+        width: 35%;
+      }
+    }
+    &__restaurants {
+      width: 100%;
+      &--margin {
+        padding-left: 35px;
+        padding-right: 35px;
+      }
+    }
+    &__background {
+      height: 220px;
+    }
+  }
+  .instructions {
+    &__title {
+      margin-top: 30px;
+      margin-left: 10px;
+      border-bottom: none;
+    }
+    &__card {
+      &--box {
+        margin-bottom: 15px;
+        width: 90%;
+      }
+    }
+  }
+  .card {
+    &--backgroundwhite {
+      height: 200px;
+    }
+  }
+  .restaurants__card {
+    width: 97%;
+    &__img {
+      &--img2 {
+        object-fit: cover;
+      }
+    }
+  }
+  .legende__hearts--white:active ~ .legende__hearts--pink {
+    animation: heart 1s cubic-bezier(0.83, 0, 0.17, 1) 0s 1 normal forwards;
+    visibility: $visible;
+  }
+  .legende__hearts--white:active {
+    fill: none;
+  }
+  .btn__commande {
+    margin-left: 50%;
+    margin-right: 50%;
+  }
+  .menu__choice {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin-top: 30px;
+  }
+  .footing {
+    font-size: 20px;
+  }
+}
+@media #{$medium} {
+  .heading {
+    &__restaurant {
+      padding-bottom: 40px;
+    }
+  }
+  .head-section {
+    &__search {
+      &--size {
+        width: 17%;
+      }
+    }
+    &__background {
+      height: 380px;
+    }
+  }
+  .card {
+    &--backgroundwhite {
+      height: 250px;
+    }
+  }
+  .restaurants__card {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+  .menu__choice {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    &--starter {
+      grid-column: 1;
+      grid-row: 1;
+    }
+    &--plate {
+      grid-column: 2;
+      grid-row: 1;
+    }
+    &--desserts {
+      grid-row: 2;
+      grid-column: 1 / span 3;
+      width: 70%;
+      justify-self: center;
+      margin-top: 15px;
+    }
+  }
+}
+@media #{$big} {
+  .head-section {
+    &__background {
+      height: 480px;
+    }
+  }
+  .restaurant {
+    @include flexbox(row);
+  }
+  .restaurants__card {
+    @include flexbox(row !important);
+    justify-content: $center;
+    width: 100%;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+  .card {
+    &--backgroundwhite {
+      margin: 10px;
+      height: 230px;
+      width: 90%;
+    }
+  }
+  .menu__choice {
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-rows: repeat(1, 1fr) !important;
+  }
+  .title {
+    margin-top: 30px;
+  }
+}
+@media #{$huge} {
+  .head-section {
+    &__background {
+      height: 650px;
+    }
+  }
+  .instructions__card {
+    margin-bottom: 50px;
+  }
+  .card {
+    &--backgroundwhite {
+      height: 250px;
+    }
+  }
+  .menu__choice {
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-rows: repeat(1, 1fr) !important;
+    margin-top: 40px;
+  }
+  .legende__text--margin {
+    overflow: visible;
+  }
+  .footing {
+    height: 60px;
+  }
+  .restaurants__card {
+    @include flexbox(row !important);
+    justify-content: $center;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .legende__hearts--left {
+    left: 90% !important;
+  }
+}
+@media #{$above767} {
+  .head-section {
+    &__restaurants {
+      padding-bottom: 40px;
+    }
+    &--background {
+      width: 100%;
+      height: 400px;
+    }
+  }
+  .instructions {
+    &__card {
+      flex-direction: row !important;
+      width: 100%;
+      &--box {
+        width: 29%;
+        margin-left: 20px;
+      }
+    }
+    &__text {
+      padding: 5px;
+    }
+  }
+  .footing {
+    @include flexbox(row !important);
+    align-items: $center;
+    justify-content: $center;
+    height: 50px;
+    padding-top: 20px;
+  }
+  .legende__hearts--white:hover ~ .legende__hearts--pink {
+    animation: heart 1s cubic-bezier(0.83, 0, 0.17, 1) 0s 1 normal forwards;
+    visibility: $visible;
+  }
+  .legende__hearts--white:hover {
+    fill: none;
+  }
+}
