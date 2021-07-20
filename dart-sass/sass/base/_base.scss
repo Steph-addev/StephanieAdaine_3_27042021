@@ -79,16 +79,14 @@
 }
 .instructions {
   &__title {
-    margin-top: 30px;
-    margin-left: 10px;
+    margin: 30px 0 0 10px;
     border-bottom: none;
   }
   &__card {
     @include flexbox(column);
     justify-content: $center;
     align-items: $center;
-    margin-bottom: 40px;
-    margin-top: 20px;
+    margin: 20px 0 40px 0;
     &--box {
       height: $height-dimension + 20px;
       background-color: $colorbackground-secondary;
@@ -101,8 +99,7 @@
       margin-top: 15px;
     }
     &--icons {
-      margin-left: 15px;
-      margin-right: 15px;
+      margin: 0 15px 0 15px;
       color: $color-primary;
     }
   }
@@ -114,9 +111,7 @@
     @include flexbox(column);
     justify-content: center;
     align-items: center;
-    margin: auto;
-    margin-bottom: 30px;
-    margin-top: 20px;
+    margin: 20px 0 40px 0;
     &--vignette {
       position: $positionr;
     }
@@ -125,6 +120,7 @@
       border-top-right-radius: 15px;
       width: 100%;
       height: 70%;
+      object-fit: cover;
       &--new {
         position: $positiona;
         right: 10px;
@@ -155,17 +151,18 @@
   position: $positionr;
   &__text {
     @include flexbox(column);
-    margin-left: 15px;
-    margin-top: 10px;
-    &--margin {
-      width: 100%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
+    margin: 10px 0 0 15px;
+  }
+  &__title {
+    width: 100%;
+    word-wrap: break-word;
   }
   &__details {
     padding-top: 2px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   &__hearts {
     align-self: center;

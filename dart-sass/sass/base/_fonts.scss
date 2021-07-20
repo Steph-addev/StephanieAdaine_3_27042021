@@ -10,8 +10,18 @@ body {
   border-bottom: 2px #99e2d0 solid;
   margin-right: 83%;
 }
-.menu__title h1 {
+.menu__title {
   font-family: "Shrikhand", cursive;
+  font-size: map-get($font-size, "small");
+}
+
+.legende {
+  &__title {
+    font-size: map-get($font-size, "medium");
+  }
+  &__details {
+    font-size: map-get($font-size, "small");
+  }
 }
 .footing {
   &__logo {

@@ -46,6 +46,10 @@
 .btn:hover {
   box-shadow: 5px 5px 5px rgb(0 0 0 / 15%);
   transition-duration: 0.25s;
+  background-image: linear-gradient(
+    rgba(147, 86, 220, 0.7) 0%,
+    rgba(255, 121, 218, 0.7) 100%
+  );
 }
 
 .title {
