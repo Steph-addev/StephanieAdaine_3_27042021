@@ -1,3 +1,4 @@
+/*uniquement pour animations et liens pour les appareils tactiles*/
 @media only screen and (max-width: 767px) {
   .head-section__search--size {
     width: 35%;
@@ -18,25 +19,18 @@
   }
 
   .card--backgroundwhite {
-    height: 200px;
+    height: 230px;
   }
 
   .restaurants__card {
     width: 97%;
   }
+  .restaurants__card__img {
+    height: 72% !important;
+  }
   .restaurants__card__img--img2 {
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-
-  .legende__hearts--white:active ~ .legende__hearts--pink {
-    -webkit-animation: heart 1s cubic-bezier(0.83, 0, 0.17, 1) 0s 1 normal forwards;
-            animation: heart 1s cubic-bezier(0.83, 0, 0.17, 1) 0s 1 normal forwards;
-    visibility: visible;
-  }
-
-  .legende__hearts--white:active {
-    fill: none;
+    -o-object-position: center;
+       object-position: center;
   }
 
   .btn__commande {
@@ -52,6 +46,53 @@
 
   .footing {
     font-size: 1em;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .legende__hearts--white:active ~ .legende__hearts--pink {
+    -webkit-animation: heart 0.5s cubic-bezier(0.83, 0, 0.17, 1) 0s 1 normal forwards;
+            animation: heart 0.5s cubic-bezier(0.83, 0, 0.17, 1) 0s 1 normal forwards;
+    visibility: visible;
+  }
+
+  .legende__hearts--white:active {
+    fill: none;
+  }
+
+  .instructions__card--box:active > .instructions__card--icons {
+    color: #9356dc;
+  }
+
+  .instructions__card--box:active {
+    background-color: #e9ddf8;
+  }
+
+  .btn:active {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+    transition-duration: 1.5s;
+    background-image: linear-gradient(rgba(147, 86, 220, 0.7) 0%, rgba(255, 121, 218, 0.7) 100%);
+  }
+
+  .legende:active > .legende__text {
+    max-width: 180px;
+  }
+
+  .legende:active > .legende__side {
+    transform: translate(-20px);
+    transition-duration: 1s;
+  }
+
+  .legende:active > .anim-coche {
+    transition: transform 10s;
+    -webkit-animation: shop-cart 0s ease 0s 1 normal forwards;
+            animation: shop-cart 0s ease 0s 1 normal forwards;
+    visibility: visible;
+    flex-grow: 8;
+  }
+
+  .legende:active > .anim-coche > .anim-coche__icon {
+    -webkit-animation: spin 1s ease 0s 1 normal forwards;
+            animation: spin 1s ease 0s 1 normal forwards;
   }
 }
 @media only screen and (min-width:768px) and (max-width:1023px) {
@@ -102,7 +143,6 @@
     grid-column: 1/span 3;
     width: 70%;
     justify-self: center;
-    margin-top: 15px;
   }
 }
 @media only screen and (min-width:1024px) and (max-width:1439px) {
@@ -147,7 +187,8 @@
 }
 @media only screen and (min-width:1440px) {
   .head-section__background {
-    height: 650px;
+    height: 630px;
+    background-position-y: 49% !important;
   }
 
   .instructions__card {
@@ -248,7 +289,7 @@
   background-color: #353535;
   color: #ffffff;
   justify-content: space-evenly;
-  padding: 20px 0 30px 15px;
+  padding: 20px 0 30px 25px;
 }
 .footing__icons {
   padding-right: 15px !important;
@@ -257,13 +298,13 @@
   padding: 20px 0 20px 0;
 }
 .footing--padding {
-  padding-top: 5px;
+  padding-top: 10px;
 }
 
 .menu {
   background-color: #f6f6f6;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
   margin-top: -30px;
 }
 
@@ -277,6 +318,7 @@
   text-decoration: none;
   color: black;
   display: block;
+  cursor: pointer;
   width: 104%;
 }
 .links--white {
@@ -378,7 +420,7 @@
 }
 .instructions__card--icons {
   margin: 0 15px 0 15px;
-  color: #9356dc;
+  color: #b9b9b9;
 }
 
 .restaurants {
@@ -412,7 +454,24 @@
   color: #008766;
   width: 80px;
   height: 30px;
-  padding: 6px;
+  padding: 8px 5px 5px 14px;
+  font: 15px bold;
+}
+.restaurants__card__img--img1 {
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+.restaurants__card__img--img2 {
+  -o-object-position: center 60%;
+     object-position: center 60%;
+}
+.restaurants__card__img--img3 {
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+.restaurants__card__img--img4 {
+  -o-object-position: bottom;
+     object-position: bottom;
 }
 
 .menu__title {
@@ -583,6 +642,10 @@
 .anim-card--entrance3 {
   -webkit-animation-delay: 10s;
           animation-delay: 10s;
+}
+
+.instructions__card--box:hover > .instructions__card--icons {
+  color: #9356dc;
 }
 
 .legende:hover > .legende__text {
@@ -776,13 +839,23 @@ body {
 
 .title--font {
   text-transform: uppercase;
-  border-bottom: 2px #99e2d0 solid;
+  border-bottom: 3px #99e2d0 solid;
   margin-right: 83%;
+  font-size: 19px;
+  font-weight: lighter;
+  margin-top: 20px;
+  margin-left: 10px;
 }
 
 .menu__title {
-  font-family: "Shrikhand", cursive;
   font-size: 0.9em;
+}
+.menu__title--font {
+  font-family: "Shrikhand", cursive;
+}
+.menu__title--heart {
+  font-size: 22px;
+  margin-right: 20px;
 }
 
 .legende__title {
@@ -790,6 +863,9 @@ body {
 }
 .legende__details {
   font-size: 0.9em;
+}
+.legende__price {
+  font-weight: bold;
 }
 
 .footing__logo {

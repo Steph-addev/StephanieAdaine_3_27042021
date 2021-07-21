@@ -1,4 +1,4 @@
-@media #{$small} {
+@media #{$x-small} {
   .head-section {
     &__search {
       &--size {
@@ -25,23 +25,17 @@
   }
   .card {
     &--backgroundwhite {
-      height: 200px;
+      height: 230px;
     }
   }
   .restaurants__card {
     width: 97%;
     &__img {
+      height: 72% !important;
       &--img2 {
-        object-fit: cover;
+        object-position: center;
       }
     }
-  }
-  .legende__hearts--white:active ~ .legende__hearts--pink {
-    animation: heart 1s cubic-bezier(0.83, 0, 0.17, 1) 0s 1 normal forwards;
-    visibility: $visible;
-  }
-  .legende__hearts--white:active {
-    fill: none;
   }
   .btn__commande {
     margin-left: 32% !important;
@@ -56,6 +50,46 @@
     font-size: map-get($font-size, "medium");
   }
 }
+@media #{$small} {
+  .legende__hearts--white:active ~ .legende__hearts--pink {
+    animation: heart 0.5s cubic-bezier(0.83, 0, 0.17, 1) 0s 1 normal forwards;
+    visibility: $visible;
+  }
+  .legende__hearts--white:active {
+    fill: none;
+  }
+  .instructions__card--box:active > .instructions__card--icons {
+    color: $color-primary;
+  }
+  .instructions__card--box:active {
+    background-color: lighten($color-primary, 32%);
+  }
+  .btn:active {
+    box-shadow: 5px 5px 5px rgb(0 0 0 / 15%);
+    transition-duration: 1.5s;
+    background-image: linear-gradient(
+      rgba(147, 86, 220, 0.7) 0%,
+      rgba(255, 121, 218, 0.7) 100%
+    );
+  }
+  .legende:active > .legende__text {
+    max-width: 180px;
+  }
+  .legende:active > .legende__side {
+    transform: translate(-20px);
+    transition-duration: 1s;
+  }
+  .legende:active > .anim-coche {
+    transition: transform 10s;
+    animation: shop-cart 0s ease 0s 1 normal forwards;
+    visibility: $visible;
+    flex-grow: 8;
+  }
+  .legende:active > .anim-coche > .anim-coche__icon {
+    animation: spin 1s ease 0s 1 normal forwards;
+  }
+}
+
 @media #{$medium} {
   .heading {
     &__restaurant {
@@ -111,7 +145,6 @@
         grid-column: 1 / span 3;
         width: 70%;
         justify-self: center;
-        margin-top: 15px;
       }
     }
   }
@@ -164,7 +197,8 @@
 @media #{$huge} {
   .head-section {
     &__background {
-      height: 650px;
+      height: 630px;
+      background-position-y: 49% !important;
     }
   }
   .instructions__card {

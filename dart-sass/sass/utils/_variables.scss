@@ -25,7 +25,8 @@ $center: center;
 $positiona: absolute;
 $positionr: relative;
 
-$small: "only screen and (max-width: 767px)";
+$x-small: "only screen and (max-width: 767px)";
+$small: "only screen and (max-width: 768px)"; /*uniquement pour animations et liens pour les appareils tactiles*/
 $medium: "only screen and (min-width:768px) and (max-width:1023px)";
 $big: "only screen and (min-width:1024px) and (max-width:1439px)";
 $huge: "only screen and (min-width:1440px)";

@@ -78,6 +78,9 @@
     animation-delay: 10s;
   }
 }
+.instructions__card--box:hover > .instructions__card--icons {
+  color: $color-primary;
+}
 .legende:hover > .legende__text {
   max-width: 180px;
 }

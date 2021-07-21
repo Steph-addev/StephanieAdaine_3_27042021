@@ -7,20 +7,34 @@ body {
 }
 .title--font {
   text-transform: uppercase;
-  border-bottom: 2px #99e2d0 solid;
+  border-bottom: 3px #99e2d0 solid;
   margin-right: 83%;
+  font-size: 19px;
+  font-weight: lighter;
+  margin-top: 20px;
+  margin-left: 10px;
 }
-.menu__title {
-  font-family: "Shrikhand", cursive;
-  font-size: map-get($font-size, "small");
+.menu {
+  &__title {
+    font-size: map-get($font-size, "small");
+    &--font {
+      font-family: "Shrikhand", cursive;
+    }
+    &--heart {
+      font-size: 22px;
+      margin-right: 20px;
+    }
+  }
 }
-
 .legende {
   &__title {
     font-size: map-get($font-size, "medium");
   }
   &__details {
     font-size: map-get($font-size, "small");
+  }
+  &__price {
+    font-weight: bold;
   }
 }
 .footing {

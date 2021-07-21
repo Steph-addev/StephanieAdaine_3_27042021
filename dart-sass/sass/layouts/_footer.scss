@@ -3,7 +3,7 @@
   background-color: $colorbackground-thirdly;
   color: $colorwhite-text;
   justify-content: space-evenly;
-  padding: 20px 0 30px 15px;
+  padding: 20px 0 30px 25px;
   &__icons {
     padding-right: 15px !important;
   }
@@ -11,6 +11,6 @@
     padding: 20px 0 20px 0;
   }
   &--padding {
-    padding-top: 5px;
+    padding-top: 10px;
   }
 }
