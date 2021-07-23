@@ -1,4 +1,4 @@
-/*uniquement pour animations et liens pour les appareils tactiles*/
+/*uniquement applicables pour animations et liens pour les appareils tactiles*/
 @media only screen and (max-width: 767px) {
   .head-section__search--size {
     width: 35%;
@@ -50,13 +50,13 @@
 }
 @media only screen and (max-width: 768px) {
   .legende__hearts--white:active ~ .legende__hearts--pink {
-    -webkit-animation: heart 0.5s cubic-bezier(0.83, 0, 0.17, 1) 0s 1 normal forwards;
-            animation: heart 0.5s cubic-bezier(0.83, 0, 0.17, 1) 0s 1 normal forwards;
-    visibility: visible;
+    -webkit-animation: heartpink 2s cubic-bezier(0.83, 0, 0.17, 1) 0s 1 normal forwards;
+            animation: heartpink 2s cubic-bezier(0.83, 0, 0.17, 1) 0s 1 normal forwards;
   }
 
   .legende__hearts--white:active {
-    fill: none;
+    -webkit-animation: heartwhite 2s cubic-bezier(0.83, 0, 0.17, 1) 0.2s 1 normal forwards;
+            animation: heartwhite 2s cubic-bezier(0.83, 0, 0.17, 1) 0.2s 1 normal forwards;
   }
 
   .instructions__card--box:active > .instructions__card--icons {
@@ -257,13 +257,13 @@
   }
 
   .legende__hearts--white:hover ~ .legende__hearts--pink {
-    -webkit-animation: heart 1s cubic-bezier(0.83, 0, 0.17, 1) 0s 1 normal forwards;
-            animation: heart 1s cubic-bezier(0.83, 0, 0.17, 1) 0s 1 normal forwards;
-    visibility: visible;
+    -webkit-animation: heartpink 2s cubic-bezier(0.83, 0, 0.17, 1) 0s 1 normal forwards;
+            animation: heartpink 2s cubic-bezier(0.83, 0, 0.17, 1) 0s 1 normal forwards;
   }
 
   .legende__hearts--white:hover {
-    fill: none;
+    -webkit-animation: heartwhite 2s cubic-bezier(0.83, 0, 0.17, 1) 0.2s 1 normal forwards;
+            animation: heartwhite 2s cubic-bezier(0.83, 0, 0.17, 1) 0.2s 1 normal forwards;
   }
 }
 .heading {
@@ -319,7 +319,7 @@
   color: black;
   display: block;
   cursor: pointer;
-  width: 104%;
+  width: 100%;
 }
 .links--white {
   color: #ffffff;
@@ -410,10 +410,13 @@
 .instructions__card--box {
   height: 60px;
   background-color: #f6f6f6;
-  padding-top: 7px;
 }
 .instructions__card--box:hover {
   background-color: #e9ddf8;
+}
+.instructions__card--box-inside {
+  line-height: 30px;
+  width: 100%;
 }
 .instructions__card--text {
   margin-top: 15px;
@@ -434,6 +437,7 @@
   justify-content: center;
   align-items: center;
   margin: 20px 0 40px 0;
+  width: 100%;
 }
 .restaurants__card--vignette {
   position: relative;
@@ -544,10 +548,10 @@
 }
 
 .spinner-page {
-  -webkit-animation: spinnerloader 1s ease 0s 1 normal forwards;
-          animation: spinnerloader 1s ease 0s 1 normal forwards;
-  -webkit-animation: spinnermove 1s linear 1s 1 normal forwards;
-          animation: spinnermove 1s linear 1s 1 normal forwards;
+  -webkit-animation: spinnerloader 2s ease 0s 1 normal forwards;
+          animation: spinnerloader 2s ease 0s 1 normal forwards;
+  -webkit-animation: spinnermove 2s linear 1s 1 normal forwards;
+          animation: spinnermove 2s linear 1s 1 normal forwards;
 }
 .spinner-page__loader--circle {
   -webkit-animation: turn 1.2s linear infinite;
@@ -644,7 +648,7 @@
           animation-delay: 10s;
 }
 
-.instructions__card--box:hover > .instructions__card--icons {
+.instructions__card--box-inside:hover > .instructions__card--icons {
   color: #9356dc;
 }
 
@@ -673,18 +677,22 @@
 @-webkit-keyframes spinnerloader {
   0% {
     opacity: 1;
+    visibility: visible;
   }
   100% {
     opacity: 0;
+    visibility: hidden;
   }
 }
 
 @keyframes spinnerloader {
   0% {
     opacity: 1;
+    visibility: visible;
   }
   100% {
     opacity: 0;
+    visibility: hidden;
   }
 }
 @-webkit-keyframes turn {
@@ -707,46 +715,66 @@
   from {
     transform: rotateX(0deg);
     transform-origin: left;
+    visibility: visible;
   }
   to {
     transform: rotateX(-100deg);
     transform-origin: left;
     opacity: 0;
+    visibility: hidden;
   }
 }
 @keyframes spinnermove {
   from {
     transform: rotateX(0deg);
     transform-origin: left;
+    visibility: visible;
   }
   to {
     transform: rotateX(-100deg);
     transform-origin: left;
     opacity: 0;
+    visibility: hidden;
   }
 }
-@-webkit-keyframes heart {
+@-webkit-keyframes heartpink {
   0% {
     opacity: 0;
-    transform: rotateX(100deg);
-    transform-origin: bottom;
+    visibility: hidden;
   }
   100% {
     opacity: 1;
-    transform: rotateX(0);
-    transform-origin: bottom;
+    visibility: visible;
   }
 }
-@keyframes heart {
+@keyframes heartpink {
   0% {
     opacity: 0;
-    transform: rotateX(100deg);
-    transform-origin: bottom;
+    visibility: hidden;
   }
   100% {
     opacity: 1;
-    transform: rotateX(0);
-    transform-origin: bottom;
+    visibility: visible;
+  }
+}
+@-webkit-keyframes heartwhite {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes heartwhite {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
   }
 }
 @-webkit-keyframes starter {

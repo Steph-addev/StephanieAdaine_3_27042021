@@ -52,11 +52,10 @@
 }
 @media #{$small} {
   .legende__hearts--white:active ~ .legende__hearts--pink {
-    animation: heart 0.5s cubic-bezier(0.83, 0, 0.17, 1) 0s 1 normal forwards;
-    visibility: $visible;
+    animation: heartpink 2s cubic-bezier(0.83, 0, 0.17, 1) 0s 1 normal forwards;
   }
   .legende__hearts--white:active {
-    fill: none;
+    animation: heartwhite 2s cubic-bezier(0.83, 0, 0.17, 1) 0.2s 1 normal forwards;
   }
   .instructions__card--box:active > .instructions__card--icons {
     color: $color-primary;
@@ -67,10 +66,7 @@
   .btn:active {
     box-shadow: 5px 5px 5px rgb(0 0 0 / 15%);
     transition-duration: 1.5s;
-    background-image: linear-gradient(
-      rgba(147, 86, 220, 0.7) 0%,
-      rgba(255, 121, 218, 0.7) 100%
-    );
+    background-image: linear-gradient(rgba(147, 86, 220, 0.7) 0%, rgba(255, 121, 218, 0.7) 100%);
   }
   .legende:active > .legende__text {
     max-width: 180px;
@@ -267,10 +263,9 @@
     padding-top: 20px;
   }
   .legende__hearts--white:hover ~ .legende__hearts--pink {
-    animation: heart 1s cubic-bezier(0.83, 0, 0.17, 1) 0s 1 normal forwards;
-    visibility: $visible;
+    animation: heartpink 2s cubic-bezier(0.83, 0, 0.17, 1) 0s 1 normal forwards;
   }
   .legende__hearts--white:hover {
-    fill: none;
+    animation: heartwhite 2s cubic-bezier(0.83, 0, 0.17, 1) 0.2s 1 normal forwards;
   }
 }

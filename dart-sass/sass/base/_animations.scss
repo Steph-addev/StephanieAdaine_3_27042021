@@ -1,6 +1,6 @@
 .spinner-page {
-  animation: spinnerloader 1s ease 0s 1 normal forwards;
-  animation: spinnermove 1s linear 1s 1 normal forwards;
+  animation: spinnerloader 2s ease 0s 1 normal forwards;
+  animation: spinnermove 2s linear 1s 1 normal forwards;
   &__loader {
     &--circle {
       animation: turn 1.2s linear infinite;
@@ -46,10 +46,7 @@
 .btn:hover {
   box-shadow: 5px 5px 5px rgb(0 0 0 / 15%);
   transition-duration: 0.25s;
-  background-image: linear-gradient(
-    rgba(147, 86, 220, 0.7) 0%,
-    rgba(255, 121, 218, 0.7) 100%
-  );
+  background-image: linear-gradient(rgba(147, 86, 220, 0.7) 0%, rgba(255, 121, 218, 0.7) 100%);
 }
 
 .title {
@@ -78,7 +75,7 @@
     animation-delay: 10s;
   }
 }
-.instructions__card--box:hover > .instructions__card--icons {
+.instructions__card--box-inside:hover > .instructions__card--icons {
   color: $color-primary;
 }
 .legende:hover > .legende__text {

@@ -8,7 +8,7 @@
   color: black;
   display: block;
   cursor: pointer;
-  width: 104%;
+  width: 100%;
   &--white {
     color: $colorwhite-text;
   }
@@ -91,10 +91,13 @@
     &--box {
       height: $height-dimension + 20px;
       background-color: $colorbackground-secondary;
-      padding-top: 7px;
       &:hover {
         background-color: lighten($color-primary, 32%);
       }
+    }
+    &--box-inside {
+      line-height: 30px;
+      width: 100%;
     }
     &--text {
       margin-top: 15px;
@@ -113,6 +116,7 @@
     justify-content: center;
     align-items: center;
     margin: 20px 0 40px 0;
+    width: 100%;
     &--vignette {
       position: $positionr;
     }
