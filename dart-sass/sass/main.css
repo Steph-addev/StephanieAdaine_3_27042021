@@ -39,8 +39,8 @@
   }
 
   .menu__choice {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    display: flex !important;
+    flex-direction: column;
     margin-top: 30px;
   }
 
@@ -306,6 +306,8 @@
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   margin-top: -30px;
+  display: flex;
+  flex-direction: column;
 }
 
 * {
@@ -343,6 +345,7 @@
   border-radius: 50%;
   text-align: center;
   margin-left: -7px;
+  line-height: 19px;
 }
 
 .head-section {
@@ -392,8 +395,11 @@
   width: 90%;
   margin: 10px;
 }
-.card--size {
+.card--menu {
   height: 70px;
+  display: flex;
+  flex-direction: row;
+  width: 95%;
 }
 
 .instructions__title {
@@ -458,8 +464,9 @@
   color: #008766;
   width: 80px;
   height: 30px;
-  padding: 8px 5px 5px 14px;
+  padding: 5px;
   font: 15px bold;
+  text-align: center;
 }
 .restaurants__card__img--img1 {
   -o-object-position: bottom;
@@ -498,6 +505,9 @@
   display: flex;
   flex-direction: column;
   margin: 10px 0 0 15px;
+}
+.legende__text--menu {
+  width: 70%;
 }
 .legende__title {
   width: 100%;
@@ -540,7 +550,7 @@
   border-bottom-right-radius: 20px;
   visibility: hidden;
   max-width: 20%;
-  margin-right: 13px;
+  height: 70px;
 }
 .anim-coche__icon {
   color: #ffffff;
@@ -648,7 +658,7 @@
           animation-delay: 10s;
 }
 
-.instructions__card--box-inside:hover > .instructions__card--icons {
+.instructions__card--box:hover > .instructions__card--box-inside > .instructions__card--icons {
   color: #9356dc;
 }
 
@@ -784,6 +794,7 @@
   }
   100% {
     transform: translate(10px);
+    width: 50%;
     visibility: visible;
   }
 }
@@ -794,6 +805,7 @@
   }
   100% {
     transform: translate(10px);
+    width: 50%;
     visibility: visible;
   }
 }
@@ -868,7 +880,7 @@ body {
 .title--font {
   text-transform: uppercase;
   border-bottom: 3px #99e2d0 solid;
-  margin-right: 83%;
+  margin-right: 68%;
   font-size: 19px;
   font-weight: lighter;
   margin-top: 20px;

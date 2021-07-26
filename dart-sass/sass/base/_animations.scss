@@ -75,7 +75,7 @@
     animation-delay: 10s;
   }
 }
-.instructions__card--box-inside:hover > .instructions__card--icons {
+.instructions__card--box:hover > .instructions__card--box-inside > .instructions__card--icons {
   color: $color-primary;
 }
 .legende:hover > .legende__text {

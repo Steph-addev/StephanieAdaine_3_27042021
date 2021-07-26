@@ -3,4 +3,5 @@
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   margin-top: -30px;
+  @include flexbox(column);
 }
