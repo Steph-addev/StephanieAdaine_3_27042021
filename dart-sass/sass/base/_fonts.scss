@@ -21,7 +21,7 @@ body {
       font-family: "Shrikhand", cursive;
     }
     &--heart {
-      font-size: 22px;
+      font-size: map-get($font-size, "medium-large");
       margin-right: 20px;
     }
   }
